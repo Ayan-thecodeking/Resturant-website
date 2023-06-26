@@ -2,6 +2,7 @@ import React from 'react'
 import './about.css';   
 import Navbar from '../Navbar/Navbar'
 import Hero from '../Hero/Hero'
+import Detail from '../DetailFood/Detail'
 
 const About = () => {
     return (
@@ -15,6 +16,7 @@ const About = () => {
                 btnClass="hide"
                 
             />
+            <Detail/>
         </>)
 }
 

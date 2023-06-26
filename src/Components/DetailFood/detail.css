@@ -1,0 +1,144 @@
+.detail{
+    margin: 6rem 8rem;
+}
+.detail h1{
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.detail .main-para{
+    font-size:3rem ;
+}
+.detail p span{
+    color: #8a3e1e;
+    font-weight: bold;
+}
+
+
+/* underline  */
+
+/* .fancy-underline {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .fancy-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to right, #e9bc6d, #d9803c);
+  } */
+  
+
+.first-about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10.5rem;
+}
+.first-about-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15rem;
+}
+.about-text{
+    width: 45%;
+    text-align: start;
+    font-size: 2.5rem;
+}
+.about-text h2{
+  padding-bottom: 2rem;
+  font-size:3rem ;
+}
+.about-text p{
+  font-size:2.5rem ;
+}
+.image-about{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -29;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.image-about img{
+    width: 49%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 62px -18px rgba(0,0,0,0.20);
+}
+
+.image-about img:nth-child(2){
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+/* ----------------------------- */
+
+.about-text 
+  
+  .points {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.points li {
+      list-style-type: disc;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+
+  }
+  
+
+
+@media screen and (max-width:850px){
+    .detail{
+        margin: 4rem 2rem;
+ }
+    .first-about{
+        display: flex;
+        flex-direction:  column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4.5rem;
+
+    }
+    .first-about-reverse{
+        display: flex;
+        flex-direction:  column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4.5rem;
+
+    }
+.about-text{
+    width: 100%;
+    font-size: 3.5rem;
+}
+.about-text h2{
+    font-size:4rem ;
+  }
+.image-about{
+    width: 100%;
+    margin: 4.8rem 0;
+}
+.image img{
+    height: 250px;
+}
+.first-about{
+    margin-top: 9rem;
+    padding: 0px 4rem;
+}
+}
