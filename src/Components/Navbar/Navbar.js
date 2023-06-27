@@ -1,7 +1,3 @@
-
-
-
-
 import React, { useState } from "react";
 import './navbar.css'
 import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
@@ -12,7 +8,8 @@ function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
 
   return (
-    <nav className="main-nav">
+    <header>
+      <div className="main-nav wrapper">
       <div className="logo">
         <h2>
           <span>F</span>ood
@@ -21,7 +18,7 @@ function Navbar() {
         </h2>
       </div>
 
-      <div className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link "}>
+      <nav className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link "}>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -30,26 +27,26 @@ function Navbar() {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact</Link></li>
         </ul>
-      </div>
+      </nav>
 
       <div className="social-media">
         <ul className="social-media-desktop">
 
           <li>
             <a
-              href="" target='_food'>
+              href="/" target='_food'>
               <FaFacebookSquare fontSize={34} color='#8a3e1e' />
             </a>
           </li>
           <li>
             <a
-              href="" target='_food'>
+              href="/" target='_food'>
               <FaInstagramSquare fontSize={34} color='#8a3e1e' />
             </a>
           </li>
           <li>
             <a
-              href="" target='_food'>
+              href="/" target='_food'>
               <FaYoutubeSquare fontSize={34} color='#8a3e1e' />
             </a>
           </li>
@@ -61,7 +58,9 @@ function Navbar() {
           </a>
         </div>
       </div>
-    </nav>)
+    </div>
+    </header>
+  )
 }
 
 export default Navbar
