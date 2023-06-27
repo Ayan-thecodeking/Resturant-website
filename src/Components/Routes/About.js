@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar'
 import Hero from '../Hero/Hero'
 import Detail from '../DetailFood/Detail'
 import Team from '../Team/Team'
+import Footer from '../Footer/Footer'
 
 
 const About = () => {
@@ -21,6 +22,7 @@ const About = () => {
             />
             <Detail/>
             <Team/>
+            <Footer/>
         </>)
 }
 
