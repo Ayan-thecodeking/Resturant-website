@@ -14,14 +14,15 @@
     margin-bottom: 2rem;
   }
   
-  h1 {
+.title {
     font-size: 4.4rem;
     margin-bottom: 1rem;
   }
   
   .top p {
     font-size: 1.8rem;
-    margin-bottom: 1remx;
+    margin-bottom: 1rem;
+    font-weight: bold;
   }
   
   .social-media {
