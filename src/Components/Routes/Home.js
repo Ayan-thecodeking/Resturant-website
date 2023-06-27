@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
 import Navbar from '../Navbar/Navbar'
+import Footer from '../Footer/Footer'
 import './home.css'
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
     url="/"
     btnClass="show"
     />
+    <Footer/>
     </>
   )
 }

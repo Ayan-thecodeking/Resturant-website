@@ -1,0 +1,64 @@
+
+ .footer {
+    background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80');
+    background-size: cover;
+    background-position: center;
+
+    background-color: #333;
+    color: #000000;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .top {
+    margin-bottom: 2rem;
+  }
+  
+  h1 {
+    font-size: 4.4rem;
+    margin-bottom: 1rem;
+  }
+  
+  .top p {
+    font-size: 1.8rem;
+    margin-bottom: 1remx;
+  }
+  
+  .social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media li {
+    margin-right: 1rem;
+  }
+  
+  .social-media li:last-child {
+    margin-right: 0;
+  }
+  
+  .social-media a {
+    display: inline-block;
+    color: #fff;
+  }
+  
+  .social-media a:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 3rem;
+    }
+    
+    p {
+      font-size: 1.4rem;
+    }
+    
+    .social-media li {
+      margin-right: .5rem;
+    }
+  }
+  

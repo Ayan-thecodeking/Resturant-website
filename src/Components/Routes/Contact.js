@@ -12,7 +12,8 @@ const Contact = () => {
                 text="Feedbacks are Welcome"
                 btnClass="hide"
                 
-            /> </> )
+            />
+             </> )
 }
 
 export default Contact
