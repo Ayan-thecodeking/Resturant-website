@@ -1,5 +1,7 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './team.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 const Team = () => {
 
     const teamMembers = [
@@ -25,11 +27,15 @@ const Team = () => {
 
         },
     ];
+
+    useEffect(()=> {
+        AOS.init({duration:2000})
+      },[]);
     return (
-        <div className="team-section wrapper">
+        <div className="team-section wrapper" data-aos="zoom-in">
             <h2 className='team-header'>Meet Our Culinary Dreamweavers</h2>
             <p>Crafting Delicious Experiences with Passion and Precision</p>
-            <div className="team-members">
+            <div className="team-members" data-aos="zoom-in">
                 {teamMembers.map((member, index) => (
                     <div className="team-member" key={index}>
                         <img src={member.imageUrl} alt={member.name} />

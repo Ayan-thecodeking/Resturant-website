@@ -1,60 +1,78 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './form.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 const Form = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const { name, email, subject, message } = formData;
 
     if (!name || !email || !subject || !message) {
       alert('Please fill in all fields');
       return;
     }
 
-    
     console.log('Form submitted');
-    
-    setName('');
-    setEmail('');
-    setSubject('');
-    setMessage('');
-  };
 
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    });
+  };
+  useEffect(()=> {
+    AOS.init({duration:2000})
+  },[]);
   return (
-    <div className="form-con">
+    <div className="form-con" data-aos="zoom-in">
       <h1>We'd love to hear from you!</h1>
-      <p>Whether you have a question, feedback, or simply want to say hello, our team is here to assist you.</p>
-      <form onSubmit={handleSubmit}>
+      <p>
+        Whether you have a question, feedback, or simply want to say hello, our team is here to assist you.
+      </p>
+      <form data-aos="zoom-in" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
           required
         />
         <input
           type="email"
           placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
           required
         />
         <input
           type="text"
           placeholder="Subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
+          name="subject"
+          value={formData.subject}
+          onChange={handleChange}
           required
         />
         <textarea
           placeholder="Message"
           rows="4"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
           required
         ></textarea>
         <button type="submit">Send Message</button>

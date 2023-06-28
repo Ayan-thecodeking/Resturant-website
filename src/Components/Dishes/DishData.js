@@ -1,6 +1,7 @@
 import './dishes.css'
-import React from 'react'
-
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 const DishData = () => {
 
     const menuItems = [
@@ -17,12 +18,14 @@ const DishData = () => {
         { url:'https://images.unsplash.com/photo-1524156868115-e696b44983db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1165&q=80',name: 'Mango Shake', description: 'Description of Item 3', price: '$2.99' },
         { url:'https://images.unsplash.com/photo-1541658016709-82535e94bc69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',name: 'Oreo Shake', description: 'Description of Item 3', price: '$2.1' },
       ];
-
+useEffect(()=> {
+  AOS.init({duration:2000})
+},[]);
   return (
-    <div className="dishcard">
+    <div className="dishcard" data-aos="fade-in">
     {menuItems.map((item, index) => (
-      <div className="cards" key={index}>
-        <div className="image">
+      <div data-aos="zoom-in" className="cards" key={index}>
+        <div  className="image">
           <img src={item.url} alt="img" />
         </div>
         <h4>{item.name}</h4>

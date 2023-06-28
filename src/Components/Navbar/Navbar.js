@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import './navbar.css'
 import { FaFacebookSquare, FaInstagramSquare, FaYoutubeSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 function Navbar() {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
-
+  useEffect(()=> {
+    AOS.init({duration:2000})
+  },[]);
   return (
-    <header>
-      <div className="main-nav wrapper">
+    <header >
+      <div className="main-nav wrapper" data-aos="fade-down">
       <div className="logo">
         <h2>
           <span>F</span>ood
@@ -18,9 +22,9 @@ function Navbar() {
         </h2>
       </div>
 
-      <nav className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link "}>
-        <ul>
-          <li>
+      <nav  className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link "}>
+        <ul >
+          <li >
             <Link to="/">Home</Link>
           </li>
           <li><Link to="/menu">Menu</Link></li>
