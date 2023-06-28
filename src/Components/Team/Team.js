@@ -11,7 +11,7 @@ const Team = () => {
 
         },
         {
-            name: 'Sia Sharma ',
+            name: 'Rinki Shaw ',
             position: 'Pastry Chef',
             bio: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem.',
             imageUrl: 'https://images.unsplash.com/photo-1602442787305-decbd65be507?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80',
@@ -26,7 +26,7 @@ const Team = () => {
         },
     ];
     return (
-        <div className="team-section">
+        <div className="team-section wrapper">
             <h2 className='team-header'>Meet Our Culinary Dreamweavers</h2>
             <p>Crafting Delicious Experiences with Passion and Precision</p>
             <div className="team-members">
@@ -35,7 +35,7 @@ const Team = () => {
                         <img src={member.imageUrl} alt={member.name} />
                          <h3>{member.name}</h3>
                         <p className='para'>{member.position}</p>
-                        <p className='bio'>{member.bio}</p>
+                        {/* <p className='bio'>{member.bio}</p> */}
                     </div>
                 ))}
             </div>

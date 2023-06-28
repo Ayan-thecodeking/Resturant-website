@@ -2,7 +2,7 @@ import React from 'react'
 import './detail.css'
 const Detail = () => {
     return (
-        <div className="detail">
+        <div className="detail wrapper">
             <h1 className='fancy-underline' >Discover Our Roots</h1>
             <p className='main-para'>This heading emphasizes the <span>FoodOmania</span> cultural or culinary roots. It can showcase the influences, traditions, or regional flavors that inspire the restaurant's cuisine.</p>
 
