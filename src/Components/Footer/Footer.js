@@ -22,24 +22,25 @@ const Footer = () => {
                     </li>
                     <li>
                         <a
-                            href="" target='_food'>
+                            href="/" target='_food'>
                             <FaInstagramSquare fontSize={34} color='black' />
                         </a>
                     </li>
                     <li>
                         <a
-                            href="" target='_food'>
+                            href="/" target='_food'>
                             <FaYoutubeSquare fontSize={34} color='black' />
                         </a>
                     </li>
                     <li>
                         <a
-                            href="" target='_food'>
+                            href="/" target='_food'>
                             <FaTwitterSquare fontSize={34} color='black' />
                         </a>
                     </li>
                 </ul>
             </div>
+               
         </div>
 
     )

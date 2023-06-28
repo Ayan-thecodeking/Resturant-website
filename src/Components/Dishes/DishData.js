@@ -1,6 +1,4 @@
 import './dishes.css'
-
-
 import React from 'react'
 
 const DishData = () => {
@@ -40,9 +38,3 @@ export default DishData
 
 
 
-{/* <div className="image">
-            <img src={props.img} alt="img" />
-        </div>
-        <h4>{props.heading}</h4>
-        <p>{props.text}</p>
-        <span className="price">{props.price}</span> */}
